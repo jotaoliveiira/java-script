@@ -6,8 +6,23 @@
     <title>Document</title>
 </head>
 <body>
+<h1>Você é estrangeiro?</h1>
+País de origem <input type="text" name="txtpais" id="txtpais">
+ <input type="submit" value="Verificar" onclick="calcular ()">
+    
+    <script>
+        function calcular () {
+            var origem = document.getElementById ('txtpais')
+            if (origem != Brasil) {
+                res.innerHTML += `você é brasileiro`
+                
 
-    
-    
+            } else {
+                res.innerHTML += `Você é estrangeiro `
+            }
+
+        
+        }
+    </script>
 </body>
 </html>
