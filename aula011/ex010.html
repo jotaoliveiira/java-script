@@ -1,31 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DRAN</title>
+    <title>DETRAN</title>
 </head>
 <body>
     <h1>Sistema de multas</h1>
-    Velocidade do carro <input type="number" name="txtvel" id="txtvel"> Km/h
-    <input type="button" value="verificar" onclick="calcular ()">
-    <div id="res">
-
-    </div>
-
+    Velocidade do carro:<input type="number" name="txtvel" id="txtvel">km/h
+    <input type="button" value="Verificar" onclick="calcular ()">
+    <div id="res"></div>
+    
     <script>
        
-        function calcular () {
-             var txtv = window.document.getElementById ('txtvel')
-             var res = window.document.querySelector ('div#res')
-             var vel = Number (txtv.value)
-             res.innerHTML = `<p> Sua velocidade atual é de<strong> ${vel} Km/h </strong></p>`
-             if ( vel > 60) {
-                res.innerHTML += ` Você Está MULTADO por excesso de velocidade `
-             }
-             res.innerHTML += '<p>Dirija sempre com cinto de segurança</p>'
-
-        }
+       function calcular () {
+           var txtv = document.getElementById ('txtvel') 
+           var vel = Number (txtv.value)
+           var res = document.getElementById ('res')
+           res.innerHTML = ` Sua velocidade é de ${vel} `
+          
+           if (vel > 60) {
+            res.innerHTML += '<p>Você está multado por excesso de velocidade</p>'
+           }
+            res.innerHTML += `Dirija sempre com cinto de segurança!!` 
+       }
     </script>
     
 </body>
